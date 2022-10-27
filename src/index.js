@@ -32,7 +32,7 @@ export const getSquareOfCircle = (radius) => {
  */
 
 export const getFixedValue = (number, accuracy) => {
-    return Math.round(number * 10**accuracy) / 10**accuracy;
+    return Math.round(number * 10 ** accuracy) / 10 ** accuracy;
 };
 
 /**
@@ -41,7 +41,13 @@ export const getFixedValue = (number, accuracy) => {
  * @param {number} number
  * @returns {number}
  */
-export const getFlooroCeil = (number) => {};
+export const getFlooroCeil = (number) => {
+    if (Math.trunc(number) % 2 == 0) {
+        return Math.floor(number)
+    }
+    return Math.ceil(number)
+};
+
 
 /**
  * Мы передаем два числа, от какого и до какого числа и функция должна
@@ -51,4 +57,4 @@ export const getFlooroCeil = (number) => {};
  * @param {number} to
  * @returns {number}
  */
-export const randomizer = (from, to) => {};
+export const randomizer = (from, to) => { };
